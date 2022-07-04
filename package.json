@@ -12,6 +12,7 @@
         "api:start": "cd udagram/udagram-api && npm run dev",
         "api:deploy": "cd udagram/udagram-api && npm run deploy",
         "deploy": "npm run api:deploy && npm run frontend:deploy",
-        "install": "npm run api:install && npm run fe:install"
+        "install": "npm run api:install && npm run fe:install",
+        "archive": "cd udagram/udagram-api && npm run archive"
     }
 }
