@@ -37,4 +37,5 @@ jobs:
 workflows:
   build_and_deploy:
     jobs:
-      - build-and-deploy
+      - build-and-deploy:
+        context: AWS
