@@ -1,4 +1,2 @@
-eb init myprojectv3 --region us-east-1 -p node.js
-eb create myprojectv3-env
-eb use myprojectv3-env
-eb deploy myprojectv3-env
+aws elasticbeanstalk create-application-version --application-name $EB_APP --version-label <<pipeline.git.revision>> --source-bundle S3Bucket="$EB_BUCKET",S3Key="Archive.zip"
+aws elasticbeanstalk update-environment --application-name $EB_APP --environment-name $EB_ENV --version-label <<pipeline.git.revision>>
