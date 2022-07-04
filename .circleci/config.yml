@@ -24,6 +24,7 @@ jobs:
           command: npm run frontend:build
       - run:
           name: Deploy Frontend
+          context: AWS
           command: npm run frontend:deploy
       - run:
           name: Back-End Install
