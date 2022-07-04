@@ -1,0 +1,3 @@
+export user_name=hassan
+export AWS_ACCESS_KEY_ID=AKIARSR6CT7DDVJXQ7NC
+export AWS_SECRET_ACCESS_KEY=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

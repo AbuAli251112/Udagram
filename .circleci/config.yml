@@ -11,10 +11,7 @@ jobs:
   build-and-deploy:
     docker:
       - image: "cimg/node:14.15"
-    auth:
-      user_name: hassan
-      AWS_ACCESS_KEY_ID: AKIARSR6CT7DDVJXQ7NC
-      AWS_SECRET_ACCESS_KEY: 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
+    shell: set_env.sh
     steps:
       - checkout
       - node/install
