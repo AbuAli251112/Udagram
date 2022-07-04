@@ -15,6 +15,7 @@
     "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
     "build": "npm install . && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json",
     "archive": "cd www && zip -r Archive.zip . && cd ..",
+    "aws-eb": "chmod +x bin/aws-eb.sh && bin/aws-eb.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
