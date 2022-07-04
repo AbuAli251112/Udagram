@@ -42,6 +42,7 @@ jobs:
       - run:
           name: Deploy Backend
           environment:
-            aws-access-id: AKIARSR6CT7DDVJXQ7NC
+            AWS_ACCESS_KEY_ID: AKIARSR6CT7DDVJXQ7NC
+            AWS_SECRET_ACCESS_KEY: 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
           command: npm run api:deploy
             
