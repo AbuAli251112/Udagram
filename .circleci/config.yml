@@ -35,7 +35,6 @@ jobs:
           name: Build and Archive Backend
           command: |-
             npm run api:build
-            printenv > www/.env
             npm run archive
       - run:
           name: Deploy Backend
