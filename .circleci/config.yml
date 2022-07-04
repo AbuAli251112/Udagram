@@ -6,8 +6,7 @@ orbs:
 workflows:
   test-env-vars:
     jobs:
-      - build-and-deploy:
-        context: AWS
+      - build-and-deploy
 jobs:
   build-and-deploy:
     docker:
