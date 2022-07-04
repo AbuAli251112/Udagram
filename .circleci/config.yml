@@ -38,8 +38,7 @@ jobs:
             npm run archive
       - run:
           name: Installing AWS Elasticbeanstalk
-          command: |
-            npm run api:aws-eb
+          command: npm run api:aws-eb
       - run:
           name: Deploy Backend
           command: npm run api:deploy
