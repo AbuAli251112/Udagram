@@ -41,5 +41,7 @@ jobs:
           command: npm run api:aws-eb
       - run:
           name: Deploy Backend
+          environment:
+            AWS_ACCESS_KEY_ID: AKIARSR6CT7DDVJXQ7NC
           command: npm run api:deploy
             
