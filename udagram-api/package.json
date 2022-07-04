@@ -14,7 +14,7 @@
     "clean": "rd /s /q www",
     "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
     "build": "npm install . && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json",
-    "archive": "cd www && zip -r Archive.zip . && cd ..",
+    "archive": "zip -r Archive.zip .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
