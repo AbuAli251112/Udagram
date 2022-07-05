@@ -1,1 +1,3 @@
-aws elasticbeanstalk create-application-version --application-name MyApp --region us-east-1 --source-bundle S3Bucket="myawsbucket251121",S3Key="Archive.zip"
+eb init myprojectv3 --region us-east-1 -p node.js
+eb use Myprojectv3-env
+eb deploy Myprojectv3-env
