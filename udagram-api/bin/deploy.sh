@@ -1,4 +1,1 @@
-eb init myprojectv3 --region us-east-1 -p node.js
-eb create myprojectv3-env --service-role aws-elasticbeanstalk-service-role
-eb use myprojectv3-env
-eb deploy myprojectv3-env
+aws elasticbeanstalk create-application-version --application-name MyApp --version-label <<pipeline.git.revision>> --region us-east-1 --source-bundle S3Bucket="myawsbucket251121",S3Key="Archive.zip"
