@@ -19,10 +19,6 @@ jobs:
           command: npm run frontend:build
       - run:
           name: Deploy Frontend
-          environment:
-            user_name: hassan
-            AWS_ACCESS_KEY_ID: AKIARSR6CT7DDVJXQ7NC
-            AWS_SECRET_ACCESS_KEY: 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
           command: npm run frontend:deploy
       - run:
           name: Back-End Install
@@ -37,10 +33,6 @@ jobs:
           command: npm run api:aws-eb
       - run:
           name: Backend Deploy
-          environment:
-            AWS_ACCESS_KEY_ID: AKIARSR6CT7DDVJXQ7NC
-            AWS_SECRET_ACCESS_KEY: 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
-            AWS_DEFAULT_REGION: us-east-1
           command: npm run api:deploy
 workflows:
   build-and-deploy:
