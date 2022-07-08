@@ -1,2 +1,2 @@
 deploy:
-  artifact: Archive.zip
+  artifact: ./www/Archive.zip
