@@ -3,10 +3,6 @@ orbs:
   node: circleci/node@5.0.2
   eb: circleci/aws-elastic-beanstalk@2.0.1
   aws-cli: circleci/aws-cli@3.1.1
-workflows:
-  test-env-vars:
-    jobs:
-      - build-and-deploy
 jobs:
   build-and-deploy:
     docker:
@@ -40,10 +36,15 @@ jobs:
           name: Installing AWS Elasticbeanstalk
           command: npm run api:aws-eb
       - run:
-          name: Deploy Backend
+          name: Backend Deploy
           environment:
             AWS_ACCESS_KEY_ID: AKIARSR6CT7DDVJXQ7NC
             AWS_SECRET_ACCESS_KEY: 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
             AWS_DEFAULT_REGION: us-east-1
           command: npm run api:deploy
+workflows:
+  build-and-deploy:
+    jobs:
+      - build-and-deploy:
+        context: AWS
             
