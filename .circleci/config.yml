@@ -3,6 +3,14 @@ orbs:
   node: circleci/node@5.0.2
   eb: circleci/aws-elastic-beanstalk@2.0.1
   aws-cli: circleci/aws-cli@3.1.1
+workflows:
+  build-and-deploy:
+    jobs:
+      - build-and-deploy:
+          context: AWS
+          Branches:
+            only: 
+              -  main
 jobs:
   build-and-deploy:
     docker:
@@ -34,9 +42,4 @@ jobs:
       - run:
           name: Backend Deploy
           command: npm run api:deploy
-workflows:
-  build-and-deploy:
-    jobs:
-      - build-and-deploy:
-          context: AWS
             
